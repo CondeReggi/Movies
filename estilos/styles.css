@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-image: url(../imagenes/cine.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    background-color: rgba(72, 38, 72, 0.248);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.buscar{
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px;
+    width: 250px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: rgb(213, 108, 213);
+    border: 3px solid rgb(56, 44, 78);
+}
+
+.buscar:focus{
+    outline: none;
+}
+
+.buscar::placeholder{
+    color: black;
+}
+
+.contenedor{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.pelicula{
+    cursor: pointer;
+    margin: 1rem;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 4px 5px black;
+    background-color: rgb(56, 44, 78);
+    width: 300px;
+    color: white;
+    position: relative;
+}
+
+.pelicula img{
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+}
+
+.pelicula_info{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+}
+
+.pelicula_info h3{
+    margin: 0;
+}
+
+.pelicula_info span{
+    font-weight: bold;
+    display: flex;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    background-color: teal;
+}
+
+.pelicula_info span.green{
+    color: green;
+}
+.pelicula_info span.organe{
+    color: orange;
+}
+.pelicula_info span.red{
+    color: red;
+}
+
+p{
+    margin-top: 6px;
+}
+
+.descripcion{
+    font-weight: 700;
+    color: black;
+    padding: 1rem 2rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in;
+}
+
+.pelicula:hover .descripcion{
+    transform: translateY(0);
+}
+
+@media (max-width: 285px){
+    header{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 367px){
+    #logo_inicio{
+        font-size: 1.5rem;
+    }
+    #search{
+        width: 200px;
+    }
+}
